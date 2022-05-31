@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="859.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.salarieController.AddSalarieController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="330.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="819.0" minWidth="10.0" prefWidth="670.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="490.0" minHeight="10.0" prefHeight="417.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="392.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="154.0" minHeight="7.0" prefHeight="50.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="199.0" prefWidth="199.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Matricule :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="145.0" top="10.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="180.0" top="15.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="185.0" top="15.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Recrutement :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="12.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entreprise :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="135.0" top="12.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categorie :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="135.0" top="15.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Taux (Heure/vente) :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="35.0" top="10.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heures/vente supp :" wrappingWidth="217.46875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="35.0" top="10.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <VBox prefHeight="600.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <TextField fx:id="tfMat">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="200.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding></TextField>
+            <TextField fx:id="tfNom">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfEmail">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfDateRec">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets right="200.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <ChoiceBox fx:id="cbEntreprise" prefHeight="35.0" prefWidth="250.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </ChoiceBox>
+            <HBox prefHeight="100.0" prefWidth="350.0">
+               <children>
+                  <RadioButton fx:id="re" mnemonicParsing="false" onAction="#setHSuppEmp" text="Employe">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rv" mnemonicParsing="false" onAction="#setPourcentageVend" text="vendeur">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <TextField fx:id="tfTHV">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets right="200.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfHVS">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets right="200.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="70.0" prefWidth="670.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addSalarie" prefHeight="25.0" prefWidth="150.0" text="Ajouter">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="150.0" text="Update">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateBtn1" mnemonicParsing="false" onAction="#ValidateUpdate" prefHeight="25.0" prefWidth="150.0" text="Validate Update">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <HBox prefHeight="350.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="table" prefHeight="311.0" prefWidth="400.0">
+               <columns>
+                  <TableColumn fx:id="matriculeCol" prefWidth="75.0" text="matricule" />
+                  <TableColumn fx:id="nomCol" prefWidth="75.0" text="nom" />
+                  <TableColumn fx:id="emailCol" prefWidth="75.0" text="email" />
+                  <TableColumn fx:id="catCol" prefWidth="75.0" text="categorie" />
+                  <TableColumn fx:id="salaireCol" prefWidth="75.0" text="salaire" />
+               </columns>
+            </TableView>
+            <VBox prefHeight="200.0" prefWidth="190.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Salarie Details : ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextArea fx:id="tfDetails" prefHeight="200.0" prefWidth="190.0" text="&#10;&#10;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="75.0" prefWidth="573.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="150.0" text="supprimer">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="detailsBtn" mnemonicParsing="false" onAction="#details" prefHeight="25.0" prefWidth="150.0" text="Details">
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="exportBtn" mnemonicParsing="false" onAction="#exporter" prefHeight="25.0" prefWidth="150.0" text="exporter">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding></Button>
+            <Button fx:id="quitBtn" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="150.0" text="quitter">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding></Button>
+         </children>
+      </HBox>
+      <Pane prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="267.0" prefWidth="256.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="lister par categorie :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="-20.0" top="-10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="rbLemp" mnemonicParsing="false" text="employe">
+                           <HBox.margin>
+                              <Insets right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rbLvend" mnemonicParsing="false" text="vendeur">
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <Button fx:id="catBtn" mnemonicParsing="false" onAction="#listCat" prefHeight="25.0" prefWidth="80.0" text="Lister">
+                     <padding>
+                        <Insets bottom="8.0" left="5.0" right="5.0" top="8.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="lister par anciennete :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="-20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="dateBtn" mnemonicParsing="false" onAction="#listAnciennete" prefHeight="25.0" prefWidth="80.0" text="Lister">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label text="lister par salaire comprise entre:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="-20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max :">
+                           <HBox.margin>
+                              <Insets right="5.0" top="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="tfSalaireMax" prefHeight="26.0" prefWidth="58.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Min :">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" top="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="tfSalaireMin" prefHeight="26.0" prefWidth="56.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="-20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="minMaxBtn" mnemonicParsing="false" onAction="#listerMinMax" prefHeight="25.0" prefWidth="80.0" text="Lister">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="40.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Liste salaire faible :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="-20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="minSalaireBtn" mnemonicParsing="false" onAction="#salaireFaible" prefHeight="25.0" prefWidth="80.0" text="Lister">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="vendeur max Taux vente :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="-20.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="maxTauxBtn" mnemonicParsing="false" onAction="#listerMaxTauxVente" prefHeight="25.0" prefWidth="80.0" text="Lister">
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Pane>
+   </children>
+</GridPane>
